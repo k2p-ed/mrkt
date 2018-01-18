@@ -32,6 +32,12 @@ module Mrkt
       end
     end
 
+
+    def describe_leads
+      get("/rest/v1/leads/describe.json")
+    end
+
+
     def associate_lead(id, cookie)
       params = Faraday::Utils::ParamsHash.new
       params[:cookie] = cookie
